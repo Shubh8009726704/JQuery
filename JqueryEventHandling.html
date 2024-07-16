@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+
+        $(document).ready(function(){
+            $("#b").mouseenter(function(){
+                $("#b").css("background-color","red");
+                // alert("You entered paragraph")
+            });
+
+            $('#box').click(function(){
+                $('#box').css('background-color','yellow');
+            })
+
+            $('#box').dblclick(function(){
+                $('#box').css('background-color','purple');
+            })
+
+            $('#box').contextmenu(function(){
+                $('#box').css('background-color','green');
+            })
+
+            $('#box').mouseenter(function(){
+                $('#box').css('background-color','orange');
+            })
+
+            $('#box').mouseleave(function(){
+                $('#box').css('background-color','blue');
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>Hands on 13 : Event Handling in jQuery</h2>
+    <p id="b">Enter this paragraph</p>
+
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat, sint. Iure facilis rem laborum nulla facere ipsa vero maxime rerum. Consequuntur earum suscipit numquam recusandae ipsa, veritatis aspernatur nam porro.</p>
+    </div>
+    
+</body>
+</html>

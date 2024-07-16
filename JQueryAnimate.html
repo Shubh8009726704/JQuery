@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <style>
+    #box{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(51, 31, 137);
+        position: relative;
+        margin: 20px;
+        color: white;
+        font-size: 20px;
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+        line-height: 5;
+    }
+  </style>
+</head>
+<body>
+    <h1>Hands on 16: Use of JQuery Animate() Method</h1>
+    <button id="animatebtn">Animate</button>
+
+    <div id="box">This is a div</p></div><br><br>
+
+    <script>
+        $(document).ready(function(){
+            $("#animatebtn").click(function(){
+                $("#box").animate({left: '400px',width:'200px',height:'200px',fontSize:'30px',borderRadius:'50%',lineHeight:'200px'},5000);
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+</head>
+<body>
+<h1>Hands on 18: Use of jQuery json </h1>
+ 
+	<div id="output"></div>
+ 
+	<script>
+		$(document).ready(function(){
+			$.ajax({
+				url:'data.json',
+				dataType:'json',
+ 
+				success: function(data){
+					$('#output').html(`
+                    <p>Name: ${data.name}</p>
+                    <p>Age: ${data.age}</p>
+                    <p>City: ${data.city}</p>
+						`);
+				},
+					error: function(){
+						$('#output').text('Error loading the JSON file');
+					}
+			});
+		}); 
+	</script>
+</body>
+</html>
+
+<!-- 
+Note : data.json file must be in same folder
+ If you want to run this file you need to server
+ Step -1 => First open your cmd where your proeject available
+ Step -2 => Run below code in your cmd
+ Step -3 => npm install -g http-server
+ Step -4 => http-server
+ Step -5 => After that run your code -->

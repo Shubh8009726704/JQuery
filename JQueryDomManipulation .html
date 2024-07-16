@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <title>Document</title>
+   
+</head>
+<body>
+    <h2>Hands on 14 : Use of JQuery for DOM Manipulation</h2>
+    <p id="test1">This is Paragraph1</p>
+    <p id="test2">This is Paragraph2</p>
+    <p><input type="text" name="" value="jquery DOM manipulation" id="test3"></p>
+
+    <button id="btn1">Text</button>
+    <button id="btn2">HTML</button>
+    <button id="btn3">Value</button>
+
+    <script>
+        $(document).ready(function(){
+      
+        $("#btn1").click(function(){
+            $("#test1").text("Text Changed");
+            $("#test1").css("color","red");
+            alert($("#test1").text());
+        });
+        $("#btn2").click(function(){
+            $("#test2").html("HTML Changed");
+            $("#test2").css("color","blue");
+            alert($("#test2").html());
+
+        });
+        $("#btn3").click(function(){
+            $("#test3").val("Value Changed");
+            $("#test3").css("color","green");
+            alert($("#test3").val());
+
+        });
+
+              
+    })
+    </script>
+
+</body>
+</html>

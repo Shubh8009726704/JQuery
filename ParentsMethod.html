@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <style>
+        .grand-parent{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .parent{
+            border: 2px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+        .child{
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hands on 17: JQuery Parents Method</h1>
+    <div class="grand-parent">
+        <p>This is my grand parent</p>
+        <div class="parent">
+            <p>This is my parent</p>
+            <div class="child">
+                <p>This is my child</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".child").css("background-color","lightblue");
+            $(".parent").parent().css("background-color","green");
+            $(".grand-parent").parents().css("background-color","yellow");
+            
+
+        })
+    </script>
+</body>
+</html>
